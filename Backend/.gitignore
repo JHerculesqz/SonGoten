@@ -1,0 +1,21 @@
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
+# Local configuration
+!.env.example
+
+# Runtime data (SQLite database and WAL files)
+data/
+
+# Logs and OS noise
+*.log
+.DS_Store
+Thumbs.db

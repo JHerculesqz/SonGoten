@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <base href="/octogame/barar/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#191715">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Loopin &amp; Toyの理想国">
+  <title>Loopin &amp; Toyの理想国</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191715'/%3E%3Ccircle cx='32' cy='32' r='14' fill='none' stroke='%23ff6a2a' stroke-width='6'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23ffe0c2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./vendor/aframe.min.js"></script>
+  <script src="./vendor/mindar-image-aframe.prod.js"></script>
+  <script src="./js/components.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- ============ AR STAGE ============ -->
+    <div class="ar-stage" id="arStage">
+      <a-scene
+        id="arScene"
+        class="ar-scene"
+        mindar-image="imageTargetSrc: ./assets/targets/cocktails.mind; autoStart: false; maxTrack: 1; missTolerance: 6; warmupTolerance: 4; uiLoading: no; uiScanning: no; uiError: no;"
+        color-space="sRGB"
+        renderer="colorManagement: true; physicallyCorrectLights: true; antialias: true"
+        vr-mode-ui="enabled: false"
+        device-orientation-permission-ui="enabled: false"
+        embedded
+      >
+        <a-assets>
+          <img id="shadowTexture" src="./assets/textures/shadow.png" crossorigin="anonymous">
+        </a-assets>
+
+        <a-entity light="type: ambient; color: #fff6e5; intensity: 0.75"></a-entity>
+        <a-entity light="type: hemisphere; color: #c8ffdf; groundColor: #14231e; intensity: 0.55"></a-entity>
+        <a-entity light="type: directional; color: #ffe2b0; intensity: 1.25" position="1.5 3 2"></a-entity>
+
+        <a-camera position="0 0 0" look-controls="enabled: false" fov="60"></a-camera>
+
+        <a-entity id="target0" mindar-image-target="targetIndex: 0"></a-entity>
+        <a-entity id="target1" mindar-image-target="targetIndex: 1"></a-entity>
+        <a-entity id="target2" mindar-image-target="targetIndex: 2"></a-entity>
+        <a-entity id="target3" mindar-image-target="targetIndex: 3"></a-entity>
+        <a-entity id="target4" mindar-image-target="targetIndex: 4"></a-entity>
+        <a-entity id="target5" mindar-image-target="targetIndex: 5"></a-entity>
+        <a-entity id="target6" mindar-image-target="targetIndex: 6"></a-entity>
+        <a-entity id="target7" mindar-image-target="targetIndex: 7"></a-entity>
+        <a-entity id="target8" mindar-image-target="targetIndex: 8"></a-entity>
+        <a-entity id="target9" mindar-image-target="targetIndex: 9"></a-entity>
+        <a-entity id="target10" mindar-image-target="targetIndex: 10"></a-entity>
+        <a-entity id="target11" mindar-image-target="targetIndex: 11"></a-entity>
+
+        <a-entity
+          id="saraCharacter"
+          visible="false"
+          position="0 -0.58 0.05"
+          scale="0.26 0.26 0.26"
+          face-camera
+        >
+          <a-entity id="saraIdle" sara-idle>
+            <a-entity id="saraBody"></a-entity>
+            <a-entity id="saraCocktail" position="0.55 1.12 0.36"></a-entity>
+          </a-entity>
+          <a-plane
+            id="characterShadow"
+            position="0 0.004 0.03"
+            rotation="-90 0 0"
+            width="2.6"
+            height="2.6"
+            material="src: #shadowTexture; transparent: true; opacity: 0.6; depthWrite: false"
+          ></a-plane>
+        </a-entity>
+      </a-scene>
+    </div>
+
+    <!-- ============ LANDING ============ -->
+    <section class="landing" id="landing" aria-label="Loopin AR 互动故事">
+      <div class="landing-wall" aria-hidden="true">
+        <div class="downlights">
+          <span class="downlight"></span>
+          <span class="downlight"></span>
+          <span class="downlight"></span>
+          <span class="downlight"></span>
+          <span class="downlight"></span>
+          <span class="downlight"></span>
+          <span class="downlight"></span>
+          <span class="downlight"></span>
+          <span class="downlight"></span>
+        </div>
+      </div>
+
+      <div class="landing-storefront" aria-hidden="true">
+        <div class="storefront-glass">
+          <span class="silhouette silhouette-left"></span>
+          <span class="silhouette silhouette-right"></span>
+        </div>
+      </div>
+
+      <div class="landing-inner">
+        <div class="wall-copy">
+          <div class="landing-topbar">
+            <span class="topbar-brand">Loopin &amp; Toy</span><span class="topbar-suffix">の理想国</span>
+          </div>
+
+          <h1 class="logo" aria-label="Loopin">
+            <span class="logo-neon">loopin</span>
+          </h1>
+
+          <p class="landing-tagline" data-i18n-html="landingTagline">来一场<em>星座与鸡尾酒的化学实验</em></p>
+        </div>
+
+        <div class="window-copy">
+          <div class="landing-card" aria-hidden="true">
+            <img src="./assets/targets/loopin-cocktail.jpg" alt="">
+            <div class="scan-beam"></div>
+            <span class="frame-corner tl"></span>
+            <span class="frame-corner tr"></span>
+            <span class="frame-corner bl"></span>
+            <span class="frame-corner br"></span>
+          </div>
+
+          <p class="landing-copy" data-i18n-html="landingCopy">
+            把镜头对准酒单，<br>
+            虚拟调酒师 <strong>SARA</strong> 会从卡片里走出来，<br>
+            为你讲述这杯鸡尾酒的故事。
+          </p>
+
+          <button class="start-btn" id="startBtn">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16"/>
+              <circle cx="12" cy="12" r="3.2"/>
+            </svg>
+            <span id="startBtnLabel" data-i18n="landingStart">开始体验</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="locale-picker landing-locale" id="landingLocale">
+        <button class="locale-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+          </svg>
+          <span class="locale-current">中</span>
+        </button>
+        <div class="locale-menu" role="listbox" hidden></div>
+      </div>
+
+      <div class="octo-credit">by OctoAI</div>
+    </section>
+
+    <!-- ============ AR HUD ============ -->
+    <div class="hud" id="hud" hidden>
+      <header class="hud-top">
+        <div class="hud-brand">
+          <span class="brand-mark" aria-hidden="true">◉</span>
+          <span class="brand-text">LOOPIN</span>
+        </div>
+        <div class="hud-actions">
+          <div class="locale-picker hud-locale" id="hudLocale">
+            <button class="locale-btn" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+              </svg>
+              <span class="locale-current">中</span>
+            </button>
+            <div class="locale-menu" role="listbox" hidden></div>
+          </div>
+          <button class="icon-btn" id="exitBtn" aria-label="退出 AR" title="退出 AR">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+              <path d="M14 5H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7"/>
+              <path d="M17 8l4 4-4 4M21 12H10"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="scan-guide" id="scanGuide">
+        <div class="scan-status-row">
+          <div class="status-pill scan-status" id="statusPill">
+            <span class="status-dot"></span>
+            <span id="statusText">正在寻找酒单</span>
+          </div>
+          <button class="icon-btn scan-mute" id="muteBtn" aria-label="关闭语音" title="关闭语音">
+            <svg class="icon-sound" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+              <path d="M4 9.5v5h3.5L12 18V6L7.5 9.5H4z"/>
+              <path d="M16 9a4.2 4.2 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/>
+            </svg>
+            <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" hidden>
+              <path d="M4 9.5v5h3.5L12 18V6L7.5 9.5H4z"/>
+              <path d="M16.5 9.5l5 5M21.5 9.5l-5 5"/>
+            </svg>
+          </button>
+        </div>
+        <div class="scan-frame">
+          <span class="frame-corner tl"></span>
+          <span class="frame-corner tr"></span>
+          <span class="frame-corner bl"></span>
+          <span class="frame-corner br"></span>
+          <div class="scan-beam"></div>
+          <div class="scan-hint-icon">⌖</div>
+        </div>
+        <div class="scan-copy">
+          <strong data-i18n="scanTitle">把镜头对准酒单</strong>
+          <span data-i18n="scanHint">保持画面稳定，奇迹会发生</span>
+        </div>
+      </div>
+
+      <div class="story-panel" id="storyPanel" hidden>
+        <div class="sheet-grab"></div>
+        <div class="story-head">
+          <h2 class="story-title"><span id="storyName">MOJITO</span><span id="storySubtitle" class="story-subtitle">哈瓦那的夏天</span></h2>
+          <div class="story-head-actions">
+            <button class="icon-btn story-act" id="playBtn" aria-label="播放故事" title="播放故事">
+              <svg class="ctrl-play" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M8 5.5v13l11-6.5-11-6.5z"/>
+              </svg>
+              <svg class="ctrl-pause" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" hidden>
+                <path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/>
+              </svg>
+            </button>
+            <button class="icon-btn story-act" id="replayBtn" aria-label="重播" title="重播">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M4 12a8 8 0 1 0 2.4-5.7M4 4.5V9h4.5"/>
+              </svg>
+            </button>
+            <button class="icon-btn story-act" id="rescanBtn" aria-label="重新扫描" title="重新扫描">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+            <button class="icon-btn story-mute" id="storyMuteBtn" aria-label="关闭语音" title="关闭语音">
+              <svg class="icon-sound" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                <path d="M4 9.5v5h3.5L12 18V6L7.5 9.5H4z"/>
+                <path d="M16 9a4.2 4.2 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/>
+              </svg>
+              <svg class="icon-muted" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" hidden>
+                <path d="M4 9.5v5h3.5L12 18V6L7.5 9.5H4z"/>
+                <path d="M16.5 9.5l5 5M21.5 9.5l-5 5"/>
+              </svg>
+            </button>
+            <button class="icon-btn story-close" id="closeStory" aria-label="收起故事面板">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="story-body" id="storyBody"></div>
+
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+
+      <button class="game-center" id="gameCenterBtn" aria-label="游戏中心" title="游戏中心">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M7.5 8h9a4.2 4.2 0 0 1 4 5.3l-1 3.5a2.4 2.4 0 0 1-4.2.8L13.6 15h-3.2l-1.7 2.6a2.4 2.4 0 0 1-4.2-.8l-1-3.5A4.2 4.2 0 0 1 7.5 8z"/>
+          <path d="M8 11v2.6M6.7 12.3h2.6M15.6 11.4h.01M17.7 13.2h.01"/>
+        </svg>
+      </button>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+      <div class="character-tag" id="characterTag" role="button" tabindex="0" aria-label="打开故事面板" hidden>
+        <span class="tag-dot"></span>
+        <span><strong>SARA</strong> · <span data-i18n="tagRole">虚拟调酒师</span></span>
+      </div>
+    </div>
+
+    <audio id="storyAudio" preload="auto" playsinline></audio>
+
+    <!-- ============ MODAL ============ -->
+    <div class="modal" id="modal" hidden>
+      <div class="modal-card">
+        <div class="modal-icon" id="modalIcon">
+          <div class="spinner" id="modalSpinner"></div>
+          <span id="modalMark" hidden>!</span>
+        </div>
+        <h3 id="modalTitle">正在启动摄像头</h3>
+        <p id="modalBody">请在浏览器提示中允许访问摄像头。</p>
+        <div class="modal-progress" id="modalProgress" hidden>
+          <div class="modal-progress-fill" id="modalProgressFill"></div>
+        </div>
+        <div class="modal-actions" id="modalActions">
+          <button class="ctrl primary" id="modalAction" hidden data-i18n="retry">重试</button>
+          <button class="ctrl" id="modalClose" hidden data-i18n="back">返回</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

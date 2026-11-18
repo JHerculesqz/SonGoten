@@ -1,0 +1,355 @@
+{
+  "version": 1,
+  "title": "十二星座鸡尾酒",
+  "subtitle": "12 Zodiac Cocktails · Loopin & Toy",
+  "cocktails": [
+    {
+      "id": "aries",
+      "targetIndex": 0,
+      "sign": "白羊座",
+      "signEn": "Aries",
+      "symbol": "♈",
+      "element": "火",
+      "cocktail": "烈焰白羊",
+      "cocktailEn": "Aries Flame",
+      "tagline": "火星之焰 · 草莓辣椒玛格丽特",
+      "glass": "coupe",
+      "accent": "#ff5a36",
+      "ingredients": [
+        "龙舌兰",
+        "草莓",
+        "青柠",
+        "红辣椒",
+        "海盐"
+      ],
+      "lines": [
+        "第一杯，献给白羊座。",
+        "它是火星的孩子，热烈、直接，从不等待。",
+        "龙舌兰打底，草莓带来明亮的甜，青柠和辣椒在舌尖点火。",
+        "杯口的盐边像一条警戒线，提醒你：靠近火焰，就要准备好被点燃。"
+      ],
+      "audio": "data/audios/aries.mp3",
+      "card": "assets/targets/cards/aries.jpg",
+      "cocktailModel": "assets/models/cocktails/aries.glb"
+    },
+    {
+      "id": "taurus",
+      "targetIndex": 1,
+      "sign": "金牛座",
+      "signEn": "Taurus",
+      "symbol": "♉",
+      "element": "土",
+      "cocktail": "金牛庄园",
+      "cocktailEn": "Taurus Orchard",
+      "tagline": "大地之味 · 苹果威士忌高球",
+      "glass": "highball",
+      "accent": "#d8a24a",
+      "ingredients": [
+        "威士忌",
+        "苹果",
+        "蜂蜜",
+        "肉桂",
+        "苏打水"
+      ],
+      "lines": [
+        "第二杯，属于金牛座。",
+        "他们相信好东西需要时间，就像橡木桶里的威士忌。",
+        "苹果的清甜、蜂蜜的圆润、肉桂的一点暖意，慢慢铺开。",
+        "这一杯不急着喝完，因为金牛知道，真正的享受从不赶路。"
+      ],
+      "audio": "data/audios/taurus.mp3",
+      "card": "assets/targets/cards/taurus.jpg",
+      "cocktailModel": "assets/models/cocktails/taurus.glb"
+    },
+    {
+      "id": "gemini",
+      "targetIndex": 2,
+      "sign": "双子座",
+      "signEn": "Gemini",
+      "symbol": "♊",
+      "element": "风",
+      "cocktail": "双面幻影",
+      "cocktailEn": "Gemini Mirage",
+      "tagline": "风之双生 · 蓝橙双子气泡",
+      "glass": "highball",
+      "accent": "#7b6cff",
+      "ingredients": [
+        "伏特加",
+        "蓝橙",
+        "葡萄柚",
+        "苏打水",
+        "双樱桃"
+      ],
+      "lines": [
+        "第三杯，献给双子座。",
+        "他们像风，前一秒在东，下一秒在西。",
+        "蓝橙和葡萄柚在杯中分成两层，像双子心里同时住着的两个人。",
+        "喝之前请先搅拌，因为双子的答案，永远不止一个。"
+      ],
+      "audio": "data/audios/gemini.mp3",
+      "card": "assets/targets/cards/gemini.jpg",
+      "cocktailModel": "assets/models/cocktails/gemini.glb"
+    },
+    {
+      "id": "cancer",
+      "targetIndex": 3,
+      "sign": "巨蟹座",
+      "signEn": "Cancer",
+      "symbol": "♋",
+      "element": "水",
+      "cocktail": "月海巨蟹",
+      "cocktailEn": "Cancer Moon",
+      "tagline": "月光之潮 · 椰香蓝橙奶昔",
+      "glass": "coupe",
+      "accent": "#8fd6e8",
+      "ingredients": [
+        "白朗姆",
+        "蓝橙",
+        "椰奶",
+        "香草",
+        "银箔"
+      ],
+      "lines": [
+        "第四杯，属于巨蟹座。",
+        "月亮守护着他们，也守护着那些不愿说出口的柔软。",
+        "椰奶像一层温柔的壳，蓝橙是壳下涌动的海。",
+        "这一杯献给所有把家藏在心里的人。"
+      ],
+      "audio": "data/audios/cancer.mp3",
+      "card": "assets/targets/cards/cancer.jpg",
+      "cocktailModel": "assets/models/cocktails/cancer.glb"
+    },
+    {
+      "id": "leo",
+      "targetIndex": 4,
+      "sign": "狮子座",
+      "signEn": "Leo",
+      "symbol": "♌",
+      "element": "火",
+      "cocktail": "太阳王座",
+      "cocktailEn": "Leo Sun Throne",
+      "tagline": "太阳之心 · 金色百香果朗姆",
+      "glass": "coupe",
+      "accent": "#ffb21f",
+      "ingredients": [
+        "金朗姆",
+        "百香果",
+        "橙汁",
+        "蜂蜜",
+        "金箔"
+      ],
+      "lines": [
+        "第五杯，献给狮子座。",
+        "他们是太阳，走进房间就自带光。",
+        "金朗姆和百香果热烈碰撞，蜂蜜收住锋芒，金箔在杯面闪了一下。",
+        "这一杯要举高一点，因为狮子从不低头喝酒。"
+      ],
+      "audio": "data/audios/leo.mp3",
+      "card": "assets/targets/cards/leo.jpg",
+      "cocktailModel": "assets/models/cocktails/leo.glb"
+    },
+    {
+      "id": "virgo",
+      "targetIndex": 5,
+      "sign": "处女座",
+      "signEn": "Virgo",
+      "symbol": "♍",
+      "element": "土",
+      "cocktail": "青柠处女",
+      "cocktailEn": "Virgo Lime",
+      "tagline": "秩序之美 · 青柠黄瓜琴酒",
+      "glass": "highball",
+      "accent": "#a8d86a",
+      "ingredients": [
+        "琴酒",
+        "青柠",
+        "黄瓜",
+        "薄荷",
+        "苏打水"
+      ],
+      "lines": [
+        "第六杯，属于处女座。",
+        "他们相信细节，冰块要方，香气要干净。",
+        "琴酒的植物气息、黄瓜的清爽、青柠的酸，被薄荷收得整整齐齐。",
+        "这一杯没有多余的东西，就像处女座想要的完美。"
+      ],
+      "audio": "data/audios/virgo.mp3",
+      "card": "assets/targets/cards/virgo.jpg",
+      "cocktailModel": "assets/models/cocktails/virgo.glb"
+    },
+    {
+      "id": "libra",
+      "targetIndex": 6,
+      "sign": "天秤座",
+      "signEn": "Libra",
+      "symbol": "♎",
+      "element": "风",
+      "cocktail": "天平玫瑰",
+      "cocktailEn": "Libra Rose",
+      "tagline": "玫瑰之衡 · 荔枝玫瑰气泡",
+      "glass": "coupe",
+      "accent": "#ff9fcf",
+      "ingredients": [
+        "金酒",
+        "荔枝",
+        "玫瑰",
+        "柠檬",
+        "气泡水"
+      ],
+      "lines": [
+        "第七杯，献给天秤座。",
+        "他们一生都在寻找平衡，也在寻找美。",
+        "荔枝的甜和柠檬的酸站在天平两端，玫瑰把一切变得柔软。",
+        "这一杯要慢慢喝，就像天秤做决定时那样。"
+      ],
+      "audio": "data/audios/libra.mp3",
+      "card": "assets/targets/cards/libra.jpg",
+      "cocktailModel": "assets/models/cocktails/libra.glb"
+    },
+    {
+      "id": "scorpio",
+      "targetIndex": 7,
+      "sign": "天蝎座",
+      "signEn": "Scorpio",
+      "symbol": "♏",
+      "element": "水",
+      "cocktail": "暗夜天蝎",
+      "cocktailEn": "Scorpio Noir",
+      "tagline": "深渊之瞳 · 黑莓紫罗兰琴酒",
+      "glass": "martini",
+      "accent": "#a04ad8",
+      "ingredients": [
+        "琴酒",
+        "黑莓",
+        "紫罗兰",
+        "柠檬",
+        "黑樱桃"
+      ],
+      "lines": [
+        "第八杯，属于天蝎座。",
+        "他们不说全部，但看见全部。",
+        "黑莓的暗、紫罗兰的冷、柠檬的一点锋利，在杯底沉下去。",
+        "这一杯给你勇气，去面对那些藏在夜色里的秘密。"
+      ],
+      "audio": "data/audios/scorpio.mp3",
+      "card": "assets/targets/cards/天蝎座.jpg",
+      "cocktailModel": "assets/models/cocktails/scorpio.glb"
+    },
+    {
+      "id": "sagittarius",
+      "targetIndex": 8,
+      "sign": "射手座",
+      "signEn": "Sagittarius",
+      "symbol": "♐",
+      "element": "火",
+      "cocktail": "星箭射手",
+      "cocktailEn": "Sagittarius Arrow",
+      "tagline": "远方之箭 · 菠萝青柠龙舌兰",
+      "glass": "highball",
+      "accent": "#28c7b8",
+      "ingredients": [
+        "龙舌兰",
+        "菠萝",
+        "青柠",
+        "姜",
+        "苏打水"
+      ],
+      "lines": [
+        "第九杯，献给射手座。",
+        "他们生来就望着远方，箭一离弦，就不问归途。",
+        "菠萝的热带甜、青柠的酸、姜的辛辣，像一场说走就走的旅行。",
+        "这一杯敬自由，也敬每一个还在路上的人。"
+      ],
+      "audio": "data/audios/sagittarius.mp3",
+      "card": "assets/targets/cards/sagittarius.jpg",
+      "cocktailModel": "assets/models/cocktails/sagittarius.glb"
+    },
+    {
+      "id": "capricorn",
+      "targetIndex": 9,
+      "sign": "摩羯座",
+      "signEn": "Capricorn",
+      "symbol": "♑",
+      "element": "土",
+      "cocktail": "山巅摩羯",
+      "cocktailEn": "Capricorn Peak",
+      "tagline": "山脊之志 · 咖啡桶陈朗姆",
+      "glass": "rocks",
+      "accent": "#b07b4f",
+      "ingredients": [
+        "陈年朗姆",
+        "冷萃咖啡",
+        "可可",
+        "橙皮",
+        "糖"
+      ],
+      "lines": [
+        "第十杯，属于摩羯座。",
+        "他们不喊口号，只是一步一步往山顶走。",
+        "陈年朗姆的厚度、冷萃咖啡的苦、可可和橙皮收尾，像一段漫长的攀登。",
+        "这一杯敬所有沉默的坚持。"
+      ],
+      "audio": "data/audios/capricorn.mp3",
+      "card": "assets/targets/cards/capricorn.jpg",
+      "cocktailModel": "assets/models/cocktails/capricorn.glb"
+    },
+    {
+      "id": "aquarius",
+      "targetIndex": 10,
+      "sign": "水瓶座",
+      "signEn": "Aquarius",
+      "symbol": "♒",
+      "element": "风",
+      "cocktail": "银河水瓶",
+      "cocktailEn": "Aquarius Galaxy",
+      "tagline": "未来之流 · 蓝橙银河气泡",
+      "glass": "highball",
+      "accent": "#3aa6ff",
+      "ingredients": [
+        "伏特加",
+        "蓝橙",
+        "接骨木花",
+        "柠檬",
+        "银河糖"
+      ],
+      "lines": [
+        "第十一杯，献给水瓶座。",
+        "他们来自未来，脑子里装着别人还没见过的星空。",
+        "蓝橙和接骨木花在杯中流动，柠檬让一切保持清醒。",
+        "这一杯没有标准答案，因为水瓶从不按配方生活。"
+      ],
+      "audio": "data/audios/aquarius.mp3",
+      "card": "assets/targets/cards/aquarius.jpg",
+      "cocktailModel": "assets/models/cocktails/aquarius.glb"
+    },
+    {
+      "id": "pisces",
+      "targetIndex": 11,
+      "sign": "双鱼座",
+      "signEn": "Pisces",
+      "symbol": "♓",
+      "element": "水",
+      "cocktail": "深海双鱼",
+      "cocktailEn": "Pisces Deep",
+      "tagline": "梦境之海 · 蓝莓荔枝奶盖",
+      "glass": "coupe",
+      "accent": "#5f8dff",
+      "ingredients": [
+        "伏特加",
+        "蓝莓",
+        "荔枝",
+        "椰奶",
+        "蝶豆花"
+      ],
+      "lines": [
+        "第十二杯，属于双鱼座。",
+        "他们是海里的一条鱼，也是岸上的一场梦。",
+        "蓝莓和荔枝把甜味藏进深海，椰奶像一层柔软的浪。",
+        "喝下这一杯，愿你今晚做一个温柔的梦。"
+      ],
+      "audio": "data/audios/pisces.mp3",
+      "card": "assets/targets/cards/双鱼座.jpg",
+      "cocktailModel": "assets/models/cocktails/pisces.glb"
+    }
+  ]
+}
